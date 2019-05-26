@@ -12,14 +12,16 @@
       <header>
         <div class="topmenu">
           <a href= {{ url_for('index') }} class="main">Информационная система управления проектами</a>
-          <a href= {{ url_for('add') }}>Добавить</a>
-          <a href= {{ url_for('projects') }}>Проекты</a>
-          <a href= {{ url_for('plans') }}>План работ</a>
-          <a href= {{ url_for('results') }}>Результаты</a>
-		  <input type="text" placeholder="Логин" name="username" size="10%">
-		  <input type="text" placeholder="Пароль" name="psw" size="10%">
-		  <button type="submit">Вход</button>
-		  <button type="submit">Регистация</button>
+          {% if current_user.is_anonymous%}
+            <a href="{{ url_for('login') }}">Войти</a>
+            <a href="{{ url_for('register') }}">Регистрация</a>
+          {% else %}
+            <a href= {{ url_for('add') }}>Добавить</a>
+            <a href= {{ url_for('projects') }}>Проекты {{ current_user.name }}</a>
+            <a href= {{ url_for('plans') }}>План работ</a>
+            <a href= {{ url_for('results') }}>Результаты</a>
+            <a href= {{ url_for('logout') }}>Выйти</a>
+          {% endif %}
         </div>
       </header>
       <!--ЭТО БАЗА ПОТОМ ВНУТРИ БЛОКА ДЕЛАЕТСЯ КОНТЕНТ  -->
