@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="shortcut icon" type="image/x-icon" href={{ url_for('static', filename='Screenshot_1.png') }}>
+  <link rel="stylesheet" href= {{ url_for('static', filename='styles.css') }} media="all">
+  <base target="_parent">
+</head>
+<body>
+     <div class="content">
+      <header>
+        <div class="topmenu">
+          <a href= {{ url_for('index') }} class="main">Информационная система управления проектами</a>
+          <a href= {{ url_for('add') }}>Добавить</a>
+          <a href= {{ url_for('projects') }}>Проекты</a>
+          <a href= {{ url_for('plans') }}>План работ</a>
+          <a href= {{ url_for('results') }}>Результаты</a>
+		  <input type="text" placeholder="Логин" name="username" size="10%">
+		  <input type="text" placeholder="Пароль" name="psw" size="10%">
+		  <button type="submit">Вход</button>
+		  <button type="submit">Регистация</button>
+        </div>
+      </header>
+      <!--ЭТО БАЗА ПОТОМ ВНУТРИ БЛОКА ДЕЛАЕТСЯ КОНТЕНТ  -->
+        {% block content %}{% endblock %} 
+    </div>
+    <footer>
+      Москва, 2019
+    </footer>
+ 
+</body>
+</html>

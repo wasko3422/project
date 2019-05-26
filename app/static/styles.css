@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #7c97b6 /*url(images/square.png)*/;
+  height: 100%;
+  font: 16px/24px Arial, Tahoma, Sans-serif;
+}
+
+.content{
+   min-height: calc(100vh - 80px);
+  background: #8497b0;
+}
+
+button{
+  width: 6%;;
+  background-color: blue;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+.main{
+  background: #8497b0;
+  box-sizing: border-box;
+  min-height: 100%;
+  
+}
+.topmenu {
+  background: #a8c4e6;
+  float: center;
+  height: 70px;
+  line-height: 70px; /*отступ сверху*/
+  font-size: 22px;
+}
+
+.topmenu a {
+  /*margin: 0 0 0 10px;*/
+  color: white;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+
+.topmenu a:hover {
+  color: black;
+}
+div.main1 {
+  padding-bottom: 100px; /*Высота футера*/
+  background: #5b9bd5;
+  align-content: center;
+  margin: 60px;
+  margin-left: 200px;
+  margin-right: 200px;
+  height: 400px;
+  color: white;
+  border: 1px solid #000000;
+}
+div.asd {
+  width: 50%;
+  background: #5b9bd5;
+  align-content: center;
+  margin: 100px;
+  float: left;
+  margin-right: 200px;
+  height: 400px;
+  color: white;
+  border: 1px solid #000000;
+}
+.block{
+  margin: auto;
+}
+footer {
+  height: 80px;
+  
+  line-height: 80px;
+  background: #a7c3e6;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+}
+textarea {
+	resize: none;
+	vertical-align: top;
+	margin-left: 5px;
+	padding:20px;
+}
+p.proj{
+	margin-left: 20px;
+}
+
+.button1 {
+  background-color: #5b9bd5; 
+  border: 1px solid #000000;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+select {
+	overflow:auto;
+}
+.sideleft{
+	float:left;
+	marin-right:5px;
+	margin-left:100px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 1000px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.rightB {
+padding-bottom: 100px; /*Высота футера*/
+  align-content: center;
+  margin: 60px;
+  margin-left: 1500px;
+  margin-right: 200px;
+}

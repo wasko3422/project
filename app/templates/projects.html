@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content%}
+	  <div class="sideleft">
+      Текущие проекты:
+      <select size = "5" style="vertical-align:top;">
+        <option>Not Started</option>
+        <option selected>In Progess</option>
+        <option>Completed</option>
+      </select>
+      <p><button class="button1" type="submit">Архив проектов</button>
+      <p><button class="button1" type="submit">Перейти к документации проекта</button>
+	  </div>
+	  
+	  <div class="asd">  
+          Информационное поле
+      <p class="proj">Название:<textarea rows="1" cols="80"></textarea>
+      <p class="proj">Описание:<textarea rows="2" cols="80"></textarea>
+      <p class="proj">Начало:<textarea rows="1" cols="80"></textarea>
+      <p class="proj">Участники:<textarea rows="5" cols="80"></textarea>
+      <p class="proj">Бюджет:<textarea rows="2" cols="80"></textarea>
+    </div>
+{% endblock %}
