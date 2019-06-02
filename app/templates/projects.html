@@ -1,23 +1,32 @@
 {% extends "base.html" %}
 
 {% block content%}
-	  <div class="sideleft">
-      Текущие проекты:
-      <select size = "5" style="vertical-align:top;">
-        <option>Not Started</option>
-        <option selected>In Progess</option>
-        <option>Completed</option>
-      </select>
-      <p><button class="button1" type="submit">Архив проектов</button>
-      <p><button class="button1" type="submit">Перейти к документации проекта</button>
-	  </div>
-	  
-	  <div class="asd">  
-          Информационное поле
-      <p class="proj">Название:<textarea rows="1" cols="80"></textarea>
-      <p class="proj">Описание:<textarea rows="2" cols="80"></textarea>
-      <p class="proj">Начало:<textarea rows="1" cols="80"></textarea>
-      <p class="proj">Участники:<textarea rows="5" cols="80"></textarea>
-      <p class="proj">Бюджет:<textarea rows="2" cols="80"></textarea>
-    </div>
+  <div class="main">  
+      <div class="sideleft">
+          <h2>План работ</h2>
+          <table>
+            <tr>
+              <th>Наименование</th>
+              <th>Описание проекта</th>
+              <th>Участники</th>
+              <th>Бюджет</th>
+              <th>Начало</th>
+              <th>Конец</th>
+              <th>Руководитель</th>
+            </tr>
+            {%for project in projects %}
+            <tr>
+              <td>{{project.name}}</td>
+              <td>{{project.description}}</td>
+              <td>{{project.participants}}</td>
+              <td>{{project.budget}}</td>
+              <td>{{project.beginning}}</td>
+              <td>{{project.end}}</td>
+              <td>{{project.leader}}</td>
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
+  </div>
 {% endblock %}

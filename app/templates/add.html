@@ -1,13 +1,57 @@
 {% extends "base.html" %}
       <!--ПО ЭТОМУ ПРИМЕРУ ДЕЛАТЬ -->
 {% block content%}
-  <div class="cont">
-      <div class="asd">  
-        Новый проект
-        <p class="proj">Название проекта:<textarea rows="1" cols="80"></textarea>
-        <p class="proj">Описание проекта:<textarea rows="2" cols="80"></textarea>
-        <input type="button" value="Добавить">
-        <input type="button" value="Отмена">
-      </div>
-  </div>  
+    <form class="register_form" action="" method="post" novalidate>
+      {{ form.hidden_tag() }}
+    <ul>
+      <li>
+         <h2>Новый проект</h2>
+      </li>
+      <li>
+          {{ form.name.label }}
+          {{ form.name(size=32) }}
+          {% for error in form.name.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+      </li>
+      <li>
+          {{ form.description.label }}
+          {{ form.description(size=32) }}
+          {% for error in form.description.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+      </li>
+      <li>
+          {{ form.participants.label }}
+          {{ form.participants(size=32) }}
+          {% for error in form.participants.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+      </li>
+      <li>
+          {{ form.budget.label }}
+          {{ form.budget(size=32) }}
+          {% for error in form.budget.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+      </li>
+      <li>
+          {{ form.beginning.label }}
+          {{ form.beginning(size=32) }}
+          {% for error in form.beginning.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+      </li>
+      <li>
+          {{ form.end.label }}
+          {{ form.end(size=32) }}
+          {% for error in form.end.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+      </li>
+      <li>
+        <button class="submit" type="submit">Добавить</button>
+      </li>
+    </ul>
+  </form>
 {% endblock %}

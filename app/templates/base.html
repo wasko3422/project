@@ -21,9 +21,17 @@
             <a href= {{ url_for('plans') }}>План работ</a>
             <a href= {{ url_for('results') }}>Результаты</a>
             <a href= {{ url_for('logout') }}>Выйти</a>
+            <span style="color: rgb(29, 16, 216); float:right; padding-right: 10px;">Привет, {{current_user.username}}! </span>
           {% endif %}
         </div>
       </header>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-info" role="alert">{{ message }}</div>
+          {% endfor %}
+      {% endif %}
+      {% endwith %}
       <!--ЭТО БАЗА ПОТОМ ВНУТРИ БЛОКА ДЕЛАЕТСЯ КОНТЕНТ  -->
         {% block content %}{% endblock %} 
     </div>

@@ -13,12 +13,14 @@ body {
   background: #8497b0;
 }
 
-button{
-  width: 6%;;
-  background-color: blue;
-  border: none;
+.topmenu button{
+  
+  background-color: #5b9bd5;
+  border: 1px solid blue;
   color: white;
   font-size: 16px;
+  padding: 4px 10px;
+  font-weight: bold;
 }
 .main{
   background: #8497b0;
@@ -32,6 +34,7 @@ button{
   height: 70px;
   line-height: 70px; /*отступ сверху*/
   font-size: 22px;
+  border: 1px solid blue;
 }
 
 .topmenu a {
@@ -47,7 +50,178 @@ button{
 .topmenu a:hover {
   color: black;
 }
-div.main1 {
+.create {
+  color: white;
+  margin: 50px;
+  font-size: 18px;
+  font-family: Arial, Georgia, Times, "Times New Roman", serif;
+}
+.create ul{
+  background: #98bce4;
+  width: 100px;
+  margin-top: -50px;
+  margin-left: 100px;
+  list-style-type:none;
+ list-style-position:outside;
+  border: 1px solid blue;
+  padding: 3px;
+}
+.projects {
+  color: white;
+  padding: 50px;
+  font-size: 18px;
+  font-family: Arial, Georgia, Times, "Times New Roman", serif;
+}
+.projects ul{
+  background: #98bce4;
+  width: 100px;
+  margin-top: -50px;
+  margin-left: 100px;
+  list-style-type:none;
+ list-style-position:outside;
+  border: 1px solid blue;
+  padding: 3px;
+}
+#projects {
+  color: white;
+  padding: 50px;
+  font-size: 18px;
+  font-family: Arial, Georgia, Times, "Times New Roman", serif;
+}
+#projects ul{
+  background: #98bce4;
+  width: 100px;
+  margin-left: 80%;
+  margin-top: -50px;
+  list-style-type:none;
+ list-style-position:outside;
+  border: 1px solid blue;
+  padding: 3px;
+}
+#formadd{
+  background: #98bce4;
+  margin-left: 500px;
+  margin-top: -100px;
+  padding: 20px;
+  width: 600px;
+  border: 1px solid blue;
+}
+#formadd button{
+  margin-left: 120px;
+  background-color: #5b9bd5;
+  border: 1px solid black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 20px;
+}
+#formprojects{
+  background: #98bce4;
+  margin-left: 500px;
+  margin-top: -200px;
+  padding: 20px;
+  width: 600px;
+  border: 1px solid blue;
+}
+.add_form{
+  font-size: 17px;
+  font-family: Arial, Georgia, Times, "Times New Roman", serif;
+  color: white;
+}
+.projects_form{
+  font-size: 17px;
+  font-family: Arial, Georgia, Times, "Times New Roman", serif;
+  color: white;
+}
+.add_form h2{
+  padding-bottom: 40px;
+}
+.projects_form h2{
+  padding-bottom: 10px;
+}
+.add_form ul{
+  list-style-type:none;
+ list-style-position:outside;
+ margin:0px;
+ padding:0px;
+}
+.projects_form ul{
+  list-style-type:none;
+ list-style-position:outside;
+ margin:0px;
+ padding:0px;
+}
+.add_form li{
+ padding:12px;
+ border-bottom:1px solid #eee;
+ position:relative;
+}
+.projects_form li{
+ padding:8px;
+ border-bottom:1px solid #eee;
+ position:relative;
+}
+.projects_form textarea {
+	resize: none;
+}
+.add_form buton{
+  
+}
+.register_form{
+  border: 2px solid blue;
+  width: 750px;
+  margin: auto;
+  margin-top: 100px;
+  background: #5b9bd5;
+  color: aliceblue;
+  font-size: 16px;
+  font-family: Arial, Georgia, Times, "Times New Roman", serif;
+}
+.register_form ul {
+ width:750px;
+ list-style-type:none;
+ list-style-position:outside;
+ margin:0px;
+ padding:0px;
+}
+.register_form li{
+ padding:12px;
+ border-bottom:1px solid #eee;
+ position:relative;
+}
+.itog{
+  margin-left: 400px;
+  margin-top: -100px;
+  margin-bottom: 0px;
+}
+.register_form li:first-child, .register_form li:last-child {
+ border-bottom:1px solid #777;
+}
+
+.register_form label {
+ width:150px;
+ margin-top: 3px;
+ display:inline-block;
+ float:left;
+ padding:3px;
+}
+.register_form input {
+ height:20px;
+ width:220px;
+ padding:5px 8px;
+}
+.register_form textarea {padding:8px; width:300px;}
+.register_form button {
+  margin-left: 250px;
+  background-color: #5b9bd5;
+  border: 2px solid black;
+  color: white;
+  font-size: 22px;
+  padding: 4px 10px;
+  font-weight: bold;  
+}
+
+.main1 {
   padding-bottom: 100px; /*Высота футера*/
   background: #5b9bd5;
   align-content: center;
@@ -58,17 +232,7 @@ div.main1 {
   color: white;
   border: 1px solid #000000;
 }
-div.asd {
-  width: 50%;
-  background: #5b9bd5;
-  align-content: center;
-  margin: 100px;
-  float: left;
-  margin-right: 200px;
-  height: 400px;
-  color: white;
-  border: 1px solid #000000;
-}
+
 .block{
   margin: auto;
 }
@@ -106,8 +270,9 @@ select {
 	overflow:auto;
 }
 .sideleft{
+  margin-top: 100px;
 	float:left;
-	marin-right:5px;
+	margin-right:5px;
 	margin-left:100px;
 }
 
